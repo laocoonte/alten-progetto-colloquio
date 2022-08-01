@@ -1,0 +1,11 @@
+
+<section (scroll)="loadNextPage()">
+  <div list-header-decoration></div>
+  <ul>
+    <li *ngFor="let post of posts; trackby:postById" class="post" @fade>
+      <app-post-item [post]="post" (delete)="deletePost.emit(post)"></app-post-item>
+    </li>
+  </ul>
+  <div #infiniteScroll></div>
+  <app-loader *ngIf="isLoading"></app-loader>
+</section>

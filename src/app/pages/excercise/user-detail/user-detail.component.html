@@ -1,0 +1,30 @@
+<h2>Dettaglio Utente</h2>
+
+<app-card>
+  <div list-header-decoration></div>
+  <ul>
+    <li *ngFor="let entry of user | keyvalue">
+      <ng-container
+        *ngIf="!['company', 'address'].includes(entry.key); else indent">
+        <app-user-detail-entry [entry]="entry"></app-user-detail-entry>
+      </ng-container>
+      <ng-template #indent>
+        <div class="key">
+          <strong>
+            {{ entry.key | translateuserprop | titlecase }}
+          </strong>
+        </div>
+        <ul>
+          <ng-template ngFor let-entry2 [ngForOf]="entry.value | keyvalue">
+            <li class="item" *ngIf="entry2.key !== 'geo'">
+              <app-user-detail-entry [entry]="entry2"></app-user-detail-entry>
+            </li>
+          </ng-template>
+        </ul>
+      </ng-template>
+    </li>
+  </ul>
+  <button (click)="back()">Indietro</button>
+</app-card>
+
+<app-loader *ngIf="isLoading"></app-loader>

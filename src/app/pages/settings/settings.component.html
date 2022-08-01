@@ -1,0 +1,20 @@
+<h2>Impostazioni</h2>
+<app-card>
+  <div list-header-decoration></div>
+  <form (ngSubmit)="save()" [formGroup]="form">
+    <div class="form-control">
+      <h4>Tema</h4>
+      <ul>
+        <li>
+          <label [attr.for]="themeEnum.LIGHT">Chiaro</label>
+          <input type="radio" [value]="themeEnum.LIGHT" name="theme" formControlName="theme">
+         </li>
+         <li>
+          <label [attr.for]="themeEnum.DARK">Scuro</label>
+          <input type="radio" [value]="themeEnum.DARK" name="theme" formControlName="theme">
+         </li>
+      </ul>
+    </div>
+    <button type="submit">Salva</button>
+  </form>
+</app-card>

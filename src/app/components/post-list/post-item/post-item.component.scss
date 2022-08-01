@@ -1,0 +1,75 @@
+:host {
+  display: flex;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  div {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .post-title {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+    .post-message {
+      font-size: 1rem;
+    }
+  }
+  footer {
+    font-size: 0.75rem;
+    a {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+  }
+
+  button.delete {
+    align-self: flex-start;
+    height: 40px;
+    width: 35px;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      content: ' ';
+      height: 33px;
+      width: 5px;
+      background-color: var(--accent-color);
+      cursor: pointer;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  ngx-smart-modal {
+    button.close {
+      background-color: var(--accent-color);
+      border: none;
+      // color: var(--text-color);
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    .username {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    .post-title {
+
+    }
+  }
+}

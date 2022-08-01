@@ -1,0 +1,28 @@
+<h2>Leggi il <span (click)="openReadme()">README</span> per avere maggiori informazioni sul task</h2>
+
+<h3>Esercizio Base:</h3>
+<figure>
+  <figcaption>
+    Lista di post con quadrato rosso allineato verticalmente al centro
+  </figcaption>
+  <img width="100%" [src]="pic" alt="Lista" />
+</figure>
+<hr />
+<h3>Esercizio Moderato:</h3>
+<figure>
+  <figcaption>
+    Lista di post con informazioni dell'utente che ha scritto il post
+  </figcaption>
+  <img width="100%" [src]="picMod1" alt="Lista di post con dettagli utente" />
+</figure>
+<figure>
+  <figcaption>
+    Card di dettaglio del post, mostrata in cima alla lista
+  </figcaption>
+  <img width="100%" [src]="picMod2" alt="Dettaglio del post con utente" />
+</figure>
+<ng-template #readmeModal>
+  <markdown
+    [src]="'assets/README.md'">
+  </markdown>
+</ng-template> 

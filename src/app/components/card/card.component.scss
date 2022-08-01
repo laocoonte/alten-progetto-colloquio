@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  overflow: hidden;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: var(--shadow-color) 0px 4px 16px,
+  var(--shadow-color) 0px 8px 24px,
+    var(--shadow-color) 0px 16px 56px;
+}

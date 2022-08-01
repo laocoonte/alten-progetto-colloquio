@@ -1,0 +1,21 @@
+<app-post-avatar [user]="user" (click)="openPost()"></app-post-avatar>
+<div>
+  <h3 class="post-title">{{ post.title | titlecase }}</h3>
+  <!-- <p class="post-message">{{ post.body }}</p> -->
+  <footer>
+    Pubblicato da
+    <a
+      [routerLink]="[paths.USER, post.userId]"
+      (click)="$event.preventDefault()"
+      >{{ user?.username }}</a
+    >
+  </footer>
+</div>
+<button class="delete" (click)="delete.emit()" ></button>
+
+<ngx-smart-modal #postDetail identifier="postDetail" class="hide-close-button">
+  <p>post pubblicato da <span>{{user?.name}}</span> alias <span class="username">{{user?.username}}</span></p>
+  <h3 class="post-title">{{ post.title | titlecase }}</h3>
+  <p class="post-message">{{ post.body }}</p>
+  <button class="close" (click)="postDetail.close()">Close</button>
+</ngx-smart-modal>

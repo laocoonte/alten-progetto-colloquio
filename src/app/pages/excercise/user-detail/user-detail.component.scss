@@ -1,0 +1,22 @@
+:host {
+  app-loader {
+    display: block;
+    margin: auto;
+  }
+  ul {
+    list-style: none;
+  }
+  .key {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  button {
+    background-color: var(--surface-color);
+    border: none;
+    border-bottom: 1px solid var(--bg-color);
+    width: 100%;
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 16px;
+  }
+}

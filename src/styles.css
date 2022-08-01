@@ -1,0 +1,49 @@
+@import "~ngx-smart-modal/ngx-smart-modal";
+@import '~ngx-toastr/toastr';
+:root {
+  --accent-color: #f50e02;
+  --surface-color: #eeeeee;
+  --text-color: #000000;
+  --bg-color: transparent;
+  --shadow-color: rgba(17, 17, 26, 0.1);
+}
+
+:root.theme-dark {
+  --accent-color: #33a9ff;
+  --surface-color: #2f4865;
+  --text-color: #f0f0f0;
+  --bg-color: #141f2a;
+  --shadow-color: #f0f0f01c;
+}
+
+/* Markdown viewer */
+:root.theme-dark .nsm-content { 
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.readme-modal {
+  max-width: 960px;
+}
+
+*[list-header-decoration] {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background-color: var(--surface-color);
+  height: 20px;
+}
+
+.hide-close-button .nsm-dialog-btn-close  {
+ display: none;
+}
